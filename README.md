@@ -1,21 +1,14 @@
-Automatic source code string values translation(localization)
+Helper Tool for Source code Localization!
+
 =======
 
 LocalMe
 
-Utility to extract String values from Source code, and generate excel file for feeding translation. 
-Then puts back the translated string  into source code.
+Extracts String values from Source code, and puts them into a new Excel file . 
+After you write down the translation of each string in Excel, then it can replace the original strings with new translated version.
 
-Current condition, it retrieves the texts(strings) valuse from project which consists UTF-8(Korean,Chinese,Japanese)..
+You can set a condition to retrieve specific strings
+Default condition retrieves the string values which contains Korean,Chinese or Japanesse characters.
 
-This project was done to accelerate localization of existing java project. 
-It helps to avoid manual translation of whole source code.
 
-What it does:
-
-1) Goes through each file and subfolders recursively and find files which are java,xml, mxml..
-2) In each file, read every line, and searchs for quote marks, and get the text inside quote marks, then puts in hashmap to avoid dublicates.
-3) Creates Excel file, puts all the strings in Excel sheet, including in which file(s) and what line the string was.
-4) After you put all translations to the left side of each string, it puts the string back into source files, replacing the old with new translation.
-
-It works in any project with any kind of files. 
+This project uses open-source jxls library.
